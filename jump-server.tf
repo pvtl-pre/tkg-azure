@@ -29,6 +29,10 @@ resource "azurerm_linux_virtual_machine" "jump-server" {
     azurerm_network_interface.jump-server-nic.id,
   ]
 
+  depends_on = [
+    azurerm_subnet_network_security_group_association.jump-server
+  ]
+
   admin_ssh_key {
     username   = var.azure_jump_server_username
     public_key = file(var.azure_jump_server_ssh_public_key_path)
