@@ -5,6 +5,7 @@
 1. [Sign in with Azure CLI](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli)
 1. Copy `terraform.tfvars.example` to `terraform.tfvars`
 1. Edit `terraform.tfvars` with your information
+1. Run `terraform init`
 1. Run `terraform plan`
 1. Run `terraform apply -auto-approve`
 1. The Public IP (PIP) of the Jump Server will be outputted
